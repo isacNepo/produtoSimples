@@ -2,21 +2,19 @@ package application;
 
 import java.util.Scanner;
 
+import entities.Produto;
+
 public class Program {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		int prodA;
-		int prodB;
-		int totalProd;
+		int prodA = sc.nextInt();
+		int prodB = sc.nextInt();
 		
-		prodA = sc.nextInt();
-		prodB = sc.nextInt();
+		Produto prod = new Produto(prodA, prodB);
 		
-		totalProd = prodA * prodB;
-		
-		System.out.println("PROD = " + totalProd);
+		System.out.println("PROD = " + prod.totalProd());
 		
 		sc.close();
 	}
